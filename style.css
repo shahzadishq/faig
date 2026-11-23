@@ -29,7 +29,7 @@ h3{font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400}
 .eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
 
 /* logo: black-on-white jpg → adapt by blend */
-.logo-dark{filter:invert(1);mix-blend-mode:screen}
+.logo-svg{display:block;height:auto}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--head);font-weight:600;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;padding:18px 34px;border:1px solid transparent;transition:all .5s var(--ease);position:relative;overflow:hidden}
@@ -56,7 +56,7 @@ h3{font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400}
 .loader{position:fixed;inset:0;background:var(--ink);z-index:200;display:grid;place-items:center;transition:opacity .9s var(--ease),visibility .9s}
 .loader.done{opacity:0;visibility:hidden}
 .loader__inner{text-align:center;color:var(--muted)}
-.loader__inner img{width:170px;margin:0 auto 24px;opacity:0;animation:fadeUp 1.2s var(--ease) .1s forwards}
+.loader__inner .logo-svg{width:170px;height:80px;margin:0 auto 24px;opacity:0;animation:fadeUp 1.2s var(--ease) .1s forwards}
 .loader__bar{width:170px;height:1px;background:var(--line);margin:0 auto 16px;overflow:hidden}
 .loader__bar span{display:block;height:100%;background:var(--bronze);width:0;animation:bar 1.6s var(--ease) forwards}
 .loader__inner p{font-family:var(--script);font-size:.8rem;color:var(--bronze-2)}
@@ -67,8 +67,8 @@ h3{font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400}
 .header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:22px var(--pad);color:#fff;transition:all .6s var(--ease)}
 .header.scrolled{background:rgba(19,18,17,.92);backdrop-filter:blur(14px);padding-top:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .header.hide{transform:translateY(-100%)}
-.header__logo img{height:58px;width:auto;transition:height .5s var(--ease)}
-.header.scrolled .header__logo img{height:46px}
+.header__logo .logo-svg{height:58px;width:123px;transition:height .5s var(--ease)}
+.header.scrolled .header__logo .logo-svg{height:46px;width:97px}
 .nav{display:flex;align-items:center;gap:clamp(16px,2.2vw,36px);font-family:var(--head);font-size:.82rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase}
 .nav a{position:relative;padding:6px 0}
 .nav a:not(.nav__cta)::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--bronze);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
@@ -87,8 +87,8 @@ h3{font-size:clamp(1.3rem,2vw,1.7rem);font-weight:400}
 .hero__slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.12);transition:opacity 1.8s ease,transform 8s linear}
 .hero__slide.is-active{opacity:1;transform:scale(1)}
 .hero__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,14,13,.82) 0%,rgba(15,14,13,.45) 45%,rgba(15,14,13,.15) 100%),linear-gradient(0deg,rgba(15,14,13,.7),transparent 40%)}
-.hero__content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 var(--pad);max-width:1100px}
-.hero__title{font-size:clamp(2.8rem,7.4vw,7rem);font-weight:200;line-height:1;margin-bottom:2rem}
+.hero__content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:130px var(--pad) 60px;max-width:1300px}
+.hero__title{font-size:clamp(2.6rem,6.2vw,5.8rem);font-weight:200;line-height:1;margin-bottom:2rem}
 .hero__title .line{display:block;overflow:hidden;padding-bottom:.06em}
 .hero__title .line>span{display:block;transform:translateY(110%);transition:transform 1.4s var(--ease)}
 .hero__title .line:nth-child(2)>span{transition-delay:.15s}
@@ -270,7 +270,7 @@ body.ready .hero__title .line>span{transform:none}
 
 /* FOOTER */
 .footer{background:var(--ink);color:var(--muted);text-align:center;padding:60px var(--pad) 40px;font-size:.88rem}
-.footer__logo{height:70px;width:auto;margin:0 auto 20px}
+.footer__logo{height:70px;width:148px;margin:0 auto 20px}
 .footer__small{margin-top:10px;font-size:.78rem}
 .footer a:hover{color:var(--bronze-2)}
 
@@ -313,7 +313,7 @@ body.ready .hero__title .line>span{transform:none}
   .form{grid-column:auto}
   .form__row{grid-template-columns:1fr}
   .timeline{grid-template-columns:1fr}
-  .header__logo img{height:46px}
+  .header__logo .logo-svg{height:46px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
