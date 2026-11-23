@@ -73,10 +73,16 @@
   /* ---------- Reveal on scroll ---------- */
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        e.target.querySelectorAll(':scope > .clip').forEach(c => c.classList.add('in'));
+        io.unobserve(e.target);
+      }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal, .clip, .masonry figure').forEach(el => io.observe(el));
+  document.querySelectorAll('.reveal, .masonry figure').forEach(el => io.observe(el));
+  // clip-path:inset(100%) hides the element from IntersectionObserver, so watch the parent instead
+  new Set([...document.querySelectorAll('.clip')].map(c => c.parentElement)).forEach(p => io.observe(p));
 
   /* ---------- Counters ---------- */
   const countIO = new IntersectionObserver(entries => {
