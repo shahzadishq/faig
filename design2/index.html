@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karl Faig GmbH – Naturstein mit Haltung. Steinmetze seit 1860 in Rain am Lech</title>
+<meta name="description" content="Natursteinbäder, Treppen, Küchen, Kamine und Grabmale. Steinmetzbetrieb Karl Faig GmbH in Rain am Lech – in fünfter Generation seit 1860. 280 Natursteine aus 42 Ländern.">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0e0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<!-- LOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <span class="loader__mark">FAIG</span>
+    <span class="loader__sub">Steinmetze seit 1860</span>
+    <span class="loader__bar"><i id="loaderBar"></i></span>
+    <span class="loader__count" id="loaderCount">0</span>
+  </div>
+</div>
+
+<div class="progress" id="progress" aria-hidden="true"><i></i></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span id="cursorLabel"></span></div>
+
+<!-- HEADER -->
+<header class="top" id="top">
+  <a href="#hero" class="brand" aria-label="Karl Faig GmbH – nach oben">
+    <span class="brand__mark">FAIG</span>
+    <span class="brand__tag">Steinmetz · seit 1860</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#filme">Filme</a>
+    <a href="#prozess">Handwerk</a>
+    <a href="#ausstellung">Ausstellung</a>
+    <a href="#unternehmen">Unternehmen</a>
+    <a href="#projekte">Projekte</a>
+  </nav>
+  <a href="#kontakt" class="btn btn--ghost top__cta" data-magnet>Termin vereinbaren</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü öffnen"><i></i><i></i></button>
+</header>
+
+<div class="mobnav" id="mobileNav" aria-hidden="true">
+  <nav aria-label="Mobile Navigation">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#filme">Filme</a>
+    <a href="#prozess">Handwerk</a>
+    <a href="#ausstellung">Ausstellung</a>
+    <a href="#unternehmen">Unternehmen</a>
+    <a href="#projekte">Projekte</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <p class="mobnav__foot">+49 (0) 9090 2450<br>Neuhofweg 10 · 86641 Rain am Lech</p>
+</div>
+
+<main id="inhalt">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__media" id="heroMedia">
+    <img id="heroImg" src="https://faig.de/wp-content/uploads/Faig_1511.jpg" alt="Waschtisch mit Rückwand aus Quarzit, gefertigt von Faig" fetchpriority="high">
+  </div>
+  <div class="hero__shade"></div>
+  <div class="hero__grain" aria-hidden="true"></div>
+
+  <div class="hero__content" id="heroContent">
+    <p class="eyebrow hero__eyebrow"><span class="line"></span>Meisterbetrieb · Rain am Lech</p>
+    <h1 class="hero__title" aria-label="Naturstein mit Haltung.">
+      <span class="ln"><span>Naturstein</span></span>
+      <span class="ln"><span>mit <em>Haltung.</em></span></span>
+    </h1>
+    <div class="hero__row">
+      <p class="hero__lead">Bäder, Treppen, Küchen und Kamine – gefertigt in unserer Manufaktur, seit 1860 in fünfter Generation.</p>
+      <div class="hero__actions">
+        <a href="#projekte" class="btn btn--solid" data-magnet>Projekte ansehen</a>
+        <a href="#filme" class="btn btn--play" data-magnet><span class="btn__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>Filme ansehen</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="seal" id="seal" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <defs><path id="sealPath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+      <text><textPath href="#sealPath" startOffset="0">Meisterbetrieb · Familienbetrieb · Seit 1860 · Fünfte Generation ·</textPath></text>
+    </svg>
+    <b>1860</b>
+  </div>
+
+  <a href="#intro" class="scrollcue" aria-label="Nach unten scrollen"><span>Scroll</span><i></i></a>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Patagonia</span><span>Taj Mahal</span><span>Avorio San Sebastian</span><span>Irish Green</span><span>Sequoia Brown</span><span>Nero Assoluto</span><span>Woodstone</span><span>Lumix</span><span>Impala</span><span>Pannonia Grün</span><span>Greystone</span><span>Phyllit</span>
+    <span>Patagonia</span><span>Taj Mahal</span><span>Avorio San Sebastian</span><span>Irish Green</span><span>Sequoia Brown</span><span>Nero Assoluto</span><span>Woodstone</span><span>Lumix</span><span>Impala</span><span>Pannonia Grün</span><span>Greystone</span><span>Phyllit</span>
+  </div>
+</div>
+
+<!-- ============ INTRO ============ -->
+<section class="intro section" id="intro">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal><span class="line"></span>Das Unternehmen</p>
+    <p class="statement" id="statement">Wir sind ein Steinmetzbetrieb in Rain am Lech und verarbeiten Naturstein in allen Formen – vom Fensterbrett über die Küche bis zum Großprojekt und zur Treppenanlage im Mehrfamilienhaus.</p>
+    <div class="intro__cols">
+      <p data-reveal>Naturstein sorgt für ein gesundes Raumklima und ist ein Unikat, das bleibt. Jede Platte hat ihre eigene Zeichnung – wir schneiden sie so, dass sie im Raum zusammenspielt.</p>
+      <p data-reveal>Bei uns arbeiten Steinmetzmeister, Steinbildhauer und weitere Gewerke Hand in Hand – von der Beratung bis zur Montage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZAHLEN ============ -->
+<section class="numbers section section--tight" id="zahlen">
+  <div class="wrap numbers__grid">
+    <div class="num" data-reveal><b data-count="1860" data-nogroup>0</b><span>Gegründet<br>in Rain am Lech</span></div>
+    <div class="num" data-reveal><b data-count="280">0</b><span>Natursteine<br>aus 42 Ländern</span></div>
+    <div class="num" data-reveal><b data-count="5000">0</b><span>m² Rohplatten<br>zur Auswahl</span></div>
+    <div class="num" data-reveal><b data-count="1000">0</b><span>m² Ausstellung<br>zum Anfassen</span></div>
+  </div>
+</section>
+
+<!-- ============ LEISTUNGEN (horizontal) ============ -->
+<section class="hs" id="leistungen">
+  <div class="hs__sticky">
+    <header class="hs__head wrap">
+      <p class="eyebrow"><span class="line"></span>Leistungen</p>
+      <h2 class="h2">Wo Stein <em>wohnt.</em></h2>
+    </header>
+    <div class="hs__viewport">
+      <div class="hs__track" id="hsTrack">
+
+        <article class="panel" data-cursor="Ansehen">
+          <div class="panel__img"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Bad_Patagonia-und-Avorio-San-Sebastian.jpeg" alt="Natursteinbad mit Patagonia und Avorio San Sebastian"></div>
+          <div class="panel__txt">
+            <span class="panel__no">01</span>
+            <h3>Bäder aus Naturstein</h3>
+            <p>Waschtischplatten, Wannen- und Wandverkleidungen, Duschwände und Böden. Wir schneiden die Platten so, dass die Maserung durch den ganzen Raum läuft.</p>
+          </div>
+        </article>
+
+        <article class="panel panel--up" data-cursor="Ansehen">
+          <div class="panel__img"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_1513.jpg" alt="Treppe aus Naturstein"></div>
+          <div class="panel__txt">
+            <span class="panel__no">02</span>
+            <h3>Treppen</h3>
+            <p>Individuell nach Maß gefertigt – vom Einfamilienhaus bis zur Treppenanlage im Mehrfamilienhaus. Boden und Stufen auf Wunsch aus demselben Stein.</p>
+          </div>
+        </article>
+
+        <article class="panel" data-cursor="Ansehen">
+          <div class="panel__img"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig-Kueche_Patagonia-hinterleuchtet.jpeg" alt="Küche mit hinterleuchteter Arbeitsplatte aus Patagonia"></div>
+          <div class="panel__txt">
+            <span class="panel__no">03</span>
+            <h3>Küchen</h3>
+            <p>Arbeitsplatten, Kücheninseln und Rückwände. Ausschnitte für Spüle und Kochfeld schneiden wir passgenau.</p>
+          </div>
+        </article>
+
+        <article class="panel panel--up" data-cursor="Ansehen">
+          <div class="panel__img"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig-Kamin_Taj-Mahal.jpeg" alt="Kaminverkleidung aus Taj Mahal Quarzit"></div>
+          <div class="panel__txt">
+            <span class="panel__no">04</span>
+            <h3>Kamine &amp; Innenausbau</h3>
+            <p>Kaminverkleidungen, Wand-, Boden- und Treppenbeläge, Fensterbänke – Naturstein für alle Räume im Haus.</p>
+          </div>
+        </article>
+
+        <article class="panel" data-cursor="Ansehen">
+          <div class="panel__img"><img loading="lazy" src="https://faig.de/wp-content/uploads/Grabmal-Faig_Rain-1.jpeg" alt="Grabmal aus Naturstein"></div>
+          <div class="panel__txt">
+            <span class="panel__no">05</span>
+            <h3>Außen &amp; Grabmale</h3>
+            <p>Terrassen, Balkone, Außentreppen, Brunnen und Findlinge – und dort, wo unsere Geschichte begann: Grabmale.</p>
+          </div>
+        </article>
+
+        <aside class="panel panel--end">
+          <p class="h3 end__t">Ihr Projekt<br>beginnt hier.</p>
+          <a href="#kontakt" class="btn btn--solid" data-magnet>Beratung anfragen</a>
+        </aside>
+      </div>
+    </div>
+    <div class="hs__bar" aria-hidden="true"><i id="hsBar"></i></div>
+  </div>
+</section>
+
+<!-- ============ LICHT DURCH DEN STEIN ============ -->
+<section class="light section" id="licht">
+  <div class="wrap light__grid">
+    <div class="light__imgs">
+      <figure class="reveal-img light__a"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler3.jpeg" alt="Hinterleuchteter Naturstein im Wellnessbereich"></div></figure>
+      <figure class="reveal-img light__b"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler2.jpeg" alt="Wellnessbereich mit Naturstein"></div></figure>
+    </div>
+    <div class="light__txt">
+      <p class="eyebrow" data-reveal><span class="line"></span>Besonderes</p>
+      <h2 class="h2" data-split>Licht <em>durch den Stein.</em></h2>
+      <p class="lead" data-reveal>Manche Steine werden erst im Gegenlicht zu dem, was sie sind. Hinterleuchtete Natursteine lassen Adern und Farbverläufe aufglühen – in Küche, Bad und Wellnessbereich.</p>
+      <p data-reveal>Welcher Stein sich dafür eignet, zeigen wir Ihnen in unserer Ausstellung – direkt an der Rohplatte.</p>
+      <a href="#ausstellung" class="link" data-reveal>Zur Ausstellung <i></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILME ============ -->
+<section class="films section" id="filme">
+  <div class="wrap">
+    <header class="films__head">
+      <p class="eyebrow" data-reveal><span class="line"></span>Faig in Bewegung</p>
+      <h2 class="h2" data-split>Unsere Arbeit <em>im Film.</em></h2>
+      <p class="lead" data-reveal>Fünf Filme aus der Manufaktur und von ausgeführten Projekten – dazu ein virtueller 360°-Rundgang durch unsere Ausstellung.</p>
+    </header>
+
+    <div class="films__grid">
+      <div class="stage" id="stage" data-cursor="Abspielen">
+        <img class="stage__poster" id="stagePoster" src="https://faig.de/wp-content/uploads/Faig_1511.jpg" alt="">
+        <div class="stage__shade"></div>
+        <button class="stage__play" id="stagePlay" aria-label="Film abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+        <div class="stage__meta"><span id="stageNo">Film 01</span><b id="stageTitle">Faig – Naturstein</b></div>
+        <div class="stage__frame" id="stageFrame"></div>
+        <a class="stage__ext" id="stageExt" href="#" target="_blank" rel="noopener">Im neuen Tab öffnen ↗</a>
+      </div>
+
+      <ol class="playlist" id="playlist">
+        <li><button class="pl is-active" data-n="1" data-poster="https://faig.de/wp-content/uploads/Faig_1511.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-001&player=n&partnerid=RED3953842857"><span class="pl__n">01</span><span class="pl__t">Film 01</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl" data-n="2" data-poster="https://faig.de/wp-content/uploads/Faig_1523.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-002&player=n&partnerid=RED3953842857"><span class="pl__n">02</span><span class="pl__t">Film 02</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl" data-n="3" data-poster="https://faig.de/wp-content/uploads/Faig_Kueche-Woodstone.jpeg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-003&player=n&partnerid=RED3953842857"><span class="pl__n">03</span><span class="pl__t">Film 03</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl" data-n="4" data-poster="https://faig.de/wp-content/uploads/Faig_1522.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-004&player=n&partnerid=RED3953842857"><span class="pl__n">04</span><span class="pl__t">Film 04</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl" data-n="5" data-poster="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler3.jpeg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-005&player=n&partnerid=RED3953842857"><span class="pl__n">05</span><span class="pl__t">Film 05</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl pl--tour" data-n="360" data-poster="https://faig.de/wp-content/uploads/Rohplattenhalle-final-012_ret.jpg" data-src="https://tourmkr.com/F1i0JTB1pa"><span class="pl__n">360°</span><span class="pl__t">Virtueller Rundgang<small>Ausstellung &amp; Rohplattenhalle</small></span><span class="pl__i"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.4" ry="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.6"/></svg></span></button></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROZESS ============ -->
+<section class="process section" id="prozess">
+  <div class="wrap process__grid">
+    <div class="process__side">
+      <p class="eyebrow" data-reveal><span class="line"></span>Handwerk &amp; Manufaktur</p>
+      <h2 class="h2" data-split>Vom Aufmaß <em>zur Montage.</em></h2>
+      <p class="lead" data-reveal>Moderne CNC-Technik trifft Steinmetzhandwerk. Planung, Fertigung und Einbau liegen bei uns in einer Hand – termingerecht und mit Partnerbetrieben aus der Region.</p>
+      <figure class="reveal-img process__img"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_1177.jpg" alt="Fertigung in der Faig Manufaktur"></div></figure>
+    </div>
+    <ol class="steps" id="steps">
+      <span class="steps__line"><i id="stepsFill"></i></span>
+      <li class="step"><span class="step__n">01</span><h3>Beratung</h3><p>Wir hören zu, zeigen Ihnen Steine an der Rohplatte und beraten individuell – am besten nach Terminvereinbarung in der Ausstellung.</p></li>
+      <li class="step"><span class="step__n">02</span><h3>Aufmaß &amp; Planung</h3><p>Wir messen vor Ort auf den Millimeter und planen den Zuschnitt so, dass die Maserung dort läuft, wo Sie sie sehen möchten.</p></li>
+      <li class="step"><span class="step__n">03</span><h3>Fertigung</h3><p>In unserer Manufaktur in Rain am Lech fertigen unsere Fachkräfte jedes Stück mit CNC-Technik und von Hand.</p></li>
+      <li class="step"><span class="step__n">04</span><h3>Montage</h3><p>Unser eigenes Team baut ein und koordiniert die Gewerke – bis alles an seinem Platz sitzt.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ AUSSTELLUNG ============ -->
+<section class="showroom" id="ausstellung">
+  <div class="showroom__bg"><img loading="lazy" id="showImg" src="https://faig.de/wp-content/uploads/Rohplattenhalle-final-012_ret.jpg" alt="Rohplattenhalle mit Natursteinplatten"></div>
+  <div class="showroom__shade"></div>
+  <div class="wrap showroom__in">
+    <p class="eyebrow" data-reveal><span class="line"></span>Ausstellung</p>
+    <h2 class="h1" data-split>Den Stein <em>vorher sehen.</em></h2>
+    <div class="showroom__cols">
+      <p class="lead" data-reveal>Aus rund 5.000 m² Rohplatten wählen Sie Ihren Stein selbst aus – auf etwa 1.000 m² Ausstellungsfläche, mit rund 280 Sorten und persönlicher Beratung.</p>
+      <ul class="hours" data-reveal>
+        <li><span>Montag – Donnerstag</span><b>08:00–12:00 · 13:00–17:30</b></li>
+        <li><span>Freitag</span><b>08:00–14:00</b></li>
+        <li><span>Außerhalb dieser Zeiten</span><b>nach Vereinbarung</b></li>
+      </ul>
+    </div>
+    <a href="#kontakt" class="btn btn--solid" data-magnet data-reveal>Beratungstermin vereinbaren</a>
+  </div>
+</section>
+
+<!-- ============ UNTERNEHMEN ============ -->
+<section class="story section" id="unternehmen">
+  <div class="wrap story__grid">
+    <div class="story__txt">
+      <p class="eyebrow" data-reveal><span class="line"></span>Unternehmen</p>
+      <h2 class="h2" data-split>Steinmetze <em>seit 1860.</em></h2>
+      <p class="lead" data-reveal>Gegründet 1860, heute in fünfter Generation: Was mit Grabsteinen begann, ist heute vor allem Innenausbau – Bäder, Küchenarbeitsplatten, Kaminverkleidungen, Treppen und Böden. Außerdem liefern wir Findlinge.</p>
+      <ul class="trust" data-reveal>
+        <li>Familienbetrieb</li>
+        <li>Meisterbetrieb</li>
+        <li>Freundliches Team</li>
+        <li>Kompetente Beratung</li>
+        <li>Jahrzehntelange Erfahrung</li>
+      </ul>
+    </div>
+    <figure class="reveal-img story__img"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Georg-Faig-und-Andreas-Wanninger-Unternehmen.jpg" alt="Georg Faig und Andreas Wanninger"></div><figcaption>Georg Faig und Andreas Wanninger</figcaption></figure>
+  </div>
+  <div class="bigyear" aria-hidden="true"><span id="bigYear">1860</span></div>
+</section>
+
+<!-- ============ PROJEKTE ============ -->
+<section class="projects section" id="projekte">
+  <div class="wrap">
+    <header class="projects__head">
+      <div>
+        <p class="eyebrow" data-reveal><span class="line"></span>Referenzen</p>
+        <h2 class="h2" data-split>Ausgewählte <em>Projekte.</em></h2>
+      </div>
+      <div class="chips" id="chips" role="tablist" aria-label="Projekte filtern">
+        <button class="chip is-on" data-f="all">Alle</button>
+        <button class="chip" data-f="bad">Bäder</button>
+        <button class="chip" data-f="kueche">Küchen</button>
+        <button class="chip" data-f="treppe">Treppen</button>
+        <button class="chip" data-f="kamin">Kamine</button>
+        <button class="chip" data-f="grab">Grabmale</button>
+      </div>
+    </header>
+
+    <div class="gal" id="gal">
+      <a class="g" data-c="bad" href="https://faig.de/wp-content/uploads/Faig_Bad_Lumix-und-Taj-Mahal.jpeg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Bad_Lumix-und-Taj-Mahal.jpeg" alt="Bad mit Lumix und Taj Mahal"><span>Bad · Lumix &amp; Taj Mahal</span></a>
+      <a class="g" data-c="kueche" href="https://faig.de/wp-content/uploads/Faig-Kueche_Taj-Mahal-2.jpeg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig-Kueche_Taj-Mahal-2.jpeg" alt="Küche aus Taj Mahal"><span>Küche · Taj Mahal</span></a>
+      <a class="g" data-c="treppe" href="https://faig.de/wp-content/uploads/startbild-eingangsbereich.jpg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/startbild-eingangsbereich.jpg" alt="Eingangsbereich mit Naturstein"><span>Eingangsbereich</span></a>
+      <a class="g" data-c="bad" href="https://faig.de/wp-content/uploads/Faig_1540.jpg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_1540.jpg" alt="Natursteinbad"><span>Bad · Naturstein</span></a>
+      <a class="g" data-c="kamin" href="https://faig.de/wp-content/uploads/Faig-Kamin_-Patagonia-green.jpeg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig-Kamin_-Patagonia-green.jpeg" alt="Kaminverkleidung Patagonia Green"><span>Kamin · Patagonia Green</span></a>
+      <a class="g" data-c="kueche" href="https://faig.de/wp-content/uploads/Faig_Kueche-Woodstone.jpeg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Kueche-Woodstone.jpeg" alt="Küche aus Woodstone"><span>Küche · Woodstone</span></a>
+      <a class="g" data-c="bad" href="https://faig.de/wp-content/uploads/drossel_faig_bad_naturstein_irish_green_avorio_9794.jpg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/drossel_faig_bad_naturstein_irish_green_avorio_9794.jpg" alt="Bad mit Irish Green und Avorio"><span>Bad · Irish Green &amp; Avorio</span></a>
+      <a class="g" data-c="treppe" href="https://faig.de/wp-content/uploads/Faig_1522.jpg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_1522.jpg" alt="Natursteintreppe"><span>Treppe</span></a>
+      <a class="g" data-c="kueche" href="https://faig.de/wp-content/uploads/Faig_Kueche-Tesla.jpeg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Kueche-Tesla.jpeg" alt="Küche aus Tesla"><span>Küche · Tesla</span></a>
+      <a class="g" data-c="bad" href="https://faig.de/wp-content/uploads/drossel_faig_naturstein_patagonia_nero_assolutto_9916.jpg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/drossel_faig_naturstein_patagonia_nero_assolutto_9916.jpg" alt="Patagonia und Nero Assoluto"><span>Bad · Patagonia &amp; Nero Assoluto</span></a>
+      <a class="g" data-c="kamin" href="https://faig.de/wp-content/uploads/Faig-Kamin_Taj-Mahal.jpeg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig-Kamin_Taj-Mahal.jpeg" alt="Kamin aus Taj Mahal"><span>Kamin · Taj Mahal</span></a>
+      <a class="g" data-c="grab" href="https://faig.de/wp-content/uploads/Grabmal-Faig_Wallerdorf.jpeg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Grabmal-Faig_Wallerdorf.jpeg" alt="Grabmal"><span>Grabmal</span></a>
+      <a class="g" data-c="kueche" href="https://faig.de/wp-content/uploads/Faig_Kueche-Lumix.jpeg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Kueche-Lumix.jpeg" alt="Küche aus Lumix"><span>Küche · Lumix</span></a>
+      <a class="g" data-c="bad" href="https://faig.de/wp-content/uploads/drossel_faig_hotel_naturstein_sequoia_brown_tresen_9760.jpg" data-cursor="Vergrößern"><img loading="lazy" src="https://faig.de/wp-content/uploads/drossel_faig_hotel_naturstein_sequoia_brown_tresen_9760.jpg" alt="Hoteltresen aus Sequoia Brown"><span>Hotel · Sequoia Brown</span></a>
+    </div>
+
+    <p class="projects__more" data-reveal>Noch mehr Referenzen finden Sie in unserer <a class="link" href="https://faig.de/referenzen/" target="_blank" rel="noopener">Galerie auf faig.de <i></i></a></p>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="contact section" id="kontakt">
+  <div class="wrap contact__grid">
+    <div class="contact__txt">
+      <p class="eyebrow" data-reveal><span class="line"></span>Kontakt</p>
+      <h2 class="h1" data-split>Sprechen wir <em>über Stein.</em></h2>
+      <p class="lead" data-reveal>Fragen oder Wünsche zu Natursteinlösungen? Wir beraten Sie gern – am besten nach Terminvereinbarung.</p>
+
+      <dl class="facts" data-reveal>
+        <div><dt>Telefon</dt><dd><a href="tel:+4990902450">+49 (0) 9090 2450</a></dd></div>
+        <div><dt>E-Mail</dt><dd><a href="mailto:info@faig.de">info@faig.de</a></dd></div>
+        <div><dt>Ausstellung, Produktion &amp; Abholung</dt><dd>Neuhofweg 10<br>86641 Rain am Lech</dd></div>
+        <div><dt>Anlieferung</dt><dd>Salbeiweg 15<br>86641 Rain am Lech<br><small>Gewerbegebiet Moosweide</small></dd></div>
+      </dl>
+    </div>
+
+    <form class="form" id="form" data-reveal novalidate>
+      <label><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+      <label><span>E-Mail</span><input type="email" name="mail" autocomplete="email" required></label>
+      <label><span>Telefon <i>(optional)</i></span><input type="tel" name="tel" autocomplete="tel"></label>
+      <label><span>Ihr Projekt</span>
+        <select name="topic">
+          <option>Bad</option><option>Treppe</option><option>Küche</option><option>Kamin</option><option>Grabmal</option><option>Sonstiges</option>
+        </select>
+      </label>
+      <label><span>Nachricht</span><textarea name="msg" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn--solid btn--block" data-magnet>Anfrage senden</button>
+      <p class="form__note" id="formNote">Mit dem Absenden öffnet sich Ihr E-Mail-Programm mit Ihrer Anfrage an info@faig.de.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <img src="https://faig.de/wp-content/uploads/faig-logo.jpg" alt="Faig – Gestalten mit Stein" width="237" height="112">
+      <p>Karl Faig GmbH · Steinmetzbetrieb<br>Neuhofweg 10 · 86641 Rain am Lech</p>
+    </div>
+    <nav class="foot__nav" aria-label="Rechtliches">
+      <a href="https://faig.de/impressum/" target="_blank" rel="noopener">Impressum</a>
+      <a href="https://faig.de/allgemeine-geschaeftsbedingungen/" target="_blank" rel="noopener">AGB</a>
+      <a href="https://faig.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a>
+      <a href="https://faig.de/karriere-stellenanzeige/" target="_blank" rel="noopener">Karriere</a>
+      <a href="https://faig.de/natursteinpflege/" target="_blank" rel="noopener">Natursteinpflege</a>
+    </nav>
+    <p class="foot__copy">© <span id="yr">2026</span> Karl Faig GmbH</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" aria-hidden="true" role="dialog" aria-label="Bildansicht">
+  <button class="lb__x" id="lbClose" aria-label="Schließen">×</button>
+  <button class="lb__nav lb__prev" id="lbPrev" aria-label="Vorheriges Bild">←</button>
+  <img id="lbImg" alt="">
+  <button class="lb__nav lb__next" id="lbNext" aria-label="Nächstes Bild">→</button>
+  <p class="lb__cap" id="lbCap"></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
