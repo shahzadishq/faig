@@ -59,7 +59,7 @@
         var mask = document.createElement("span"); mask.className = "sp-l";
         var inner = document.createElement("span");
         inner.textContent = part;
-        if (isEm) { inner.style.fontStyle = "italic"; inner.style.color = "var(--brass-l)"; }
+        if (isEm) inner.className = "rs";
         mask.appendChild(inner); el.appendChild(mask);
       });
     });
@@ -83,7 +83,7 @@
   window.scrollTo(0, 0);
   gsap.set("#top", { yPercent: -100 });
   gsap.to(prog, {
-    v: 100, duration: 1.8, ease: "power2.inOut",
+    v: 100, duration: 1.3, ease: "power2.inOut",
     onUpdate: function () {
       var v = loaded ? prog.v : Math.min(prog.v, 88);
       bar.style.transform = "scaleX(" + v / 100 + ")"; cnt.textContent = Math.round(v);
@@ -234,6 +234,13 @@
     });
 
     initCursor(); initMagnet(); initFilms(); initGallery(); initForm();
+
+    /* keep trigger positions correct when lazy images / fonts change the layout */
+    var rt;
+    var rf = function () { clearTimeout(rt); rt = setTimeout(function () { ScrollTrigger.refresh(); }, 250); };
+    $$("img").forEach(function (i) { if (!i.complete) i.addEventListener("load", rf, { once: true }); });
+    if (document.readyState === "complete") rf(); else window.addEventListener("load", rf);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(rf);
     ScrollTrigger.refresh();
   }
 
@@ -278,7 +285,7 @@
       var tour = btn.classList.contains("pl--tour");
       poster.src = btn.dataset.poster;
       no.textContent = tour ? "Virtueller Rundgang" : "Film " + btn.dataset.n.padStart(2, "0");
-      title.textContent = tour ? "Ausstellung in 360°" : "Faig – Naturstein";
+      title.textContent = tour ? "Ausstellung in 360°" : btn.dataset.title;
       stage.setAttribute("data-cursor", tour ? "Rundgang" : "Abspielen");
       if (play) start();
     }

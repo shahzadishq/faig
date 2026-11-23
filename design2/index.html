@@ -9,9 +9,9 @@
 <meta name="theme-color" content="#0e0d0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Rock+Salt&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add("js")</script>
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -33,8 +33,7 @@
 <!-- HEADER -->
 <header class="top" id="top">
   <a href="#hero" class="brand" aria-label="Karl Faig GmbH – nach oben">
-    <span class="brand__mark">FAIG</span>
-    <span class="brand__tag">Steinmetz · seit 1860</span>
+    <img src="https://faig.de/wp-content/uploads/faig-logo.jpg" alt="Faig – Gestalten mit Stein" width="237" height="112">
   </a>
   <nav class="nav" id="nav" aria-label="Hauptnavigation">
     <a href="#leistungen">Leistungen</a>
@@ -89,7 +88,7 @@
   <div class="seal" id="seal" aria-hidden="true">
     <svg viewBox="0 0 200 200">
       <defs><path id="sealPath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-      <text><textPath href="#sealPath" startOffset="0">Meisterbetrieb · Familienbetrieb · Seit 1860 · Fünfte Generation ·</textPath></text>
+      <text><textPath href="#sealPath" startOffset="0" textLength="482" lengthAdjust="spacing">Meisterbetrieb · Seit 1860 · Fünfte Generation ·</textPath></text>
     </svg>
     <b>1860</b>
   </div>
@@ -110,9 +109,19 @@
   <div class="wrap">
     <p class="eyebrow" data-reveal><span class="line"></span>Das Unternehmen</p>
     <p class="statement" id="statement">Wir sind ein Steinmetzbetrieb in Rain am Lech und verarbeiten Naturstein in allen Formen – vom Fensterbrett über die Küche bis zum Großprojekt und zur Treppenanlage im Mehrfamilienhaus.</p>
-    <div class="intro__cols">
-      <p data-reveal>Naturstein sorgt für ein gesundes Raumklima und ist ein Unikat, das bleibt. Jede Platte hat ihre eigene Zeichnung – wir schneiden sie so, dass sie im Raum zusammenspielt.</p>
-      <p data-reveal>Bei uns arbeiten Steinmetzmeister, Steinbildhauer und weitere Gewerke Hand in Hand – von der Beratung bis zur Montage.</p>
+    <div class="cards">
+      <article class="card" data-reveal>
+        <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 6 3-6M12 21 9 9m3 12 3-12"/></svg></span>
+        <span class="card__no">01</span>
+        <h3>Ein Unikat, das bleibt</h3>
+        <p>Naturstein sorgt für ein gesundes Raumklima und ist ein Unikat, das bleibt. Jede Platte hat ihre eigene Zeichnung – wir schneiden sie so, dass sie im Raum zusammenspielt.</p>
+      </article>
+      <article class="card" data-reveal>
+        <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2c3 .2 5 2.3 5 5.8"/></svg></span>
+        <span class="card__no">02</span>
+        <h3>Gewerke Hand in Hand</h3>
+        <p>Bei uns arbeiten Steinmetzmeister, Steinbildhauer und weitere Gewerke Hand in Hand – von der Beratung bis zur Montage.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -201,7 +210,7 @@
     </div>
     <div class="light__txt">
       <p class="eyebrow" data-reveal><span class="line"></span>Besonderes</p>
-      <h2 class="h2" data-split>Licht <em>durch den Stein.</em></h2>
+      <h2 class="h2" data-split>Licht durch den <em>Stein.</em></h2>
       <p class="lead" data-reveal>Manche Steine werden erst im Gegenlicht zu dem, was sie sind. Hinterleuchtete Natursteine lassen Adern und Farbverläufe aufglühen – in Küche, Bad und Wellnessbereich.</p>
       <p data-reveal>Welcher Stein sich dafür eignet, zeigen wir Ihnen in unserer Ausstellung – direkt an der Rohplatte.</p>
       <a href="#ausstellung" class="link" data-reveal>Zur Ausstellung <i></i></a>
@@ -214,7 +223,7 @@
   <div class="wrap">
     <header class="films__head">
       <p class="eyebrow" data-reveal><span class="line"></span>Faig in Bewegung</p>
-      <h2 class="h2" data-split>Unsere Arbeit <em>im Film.</em></h2>
+      <h2 class="h2" data-split>Unsere Arbeit im <em>Film.</em></h2>
       <p class="lead" data-reveal>Fünf Filme aus der Manufaktur und von ausgeführten Projekten – dazu ein virtueller 360°-Rundgang durch unsere Ausstellung.</p>
     </header>
 
@@ -223,17 +232,17 @@
         <img class="stage__poster" id="stagePoster" src="https://faig.de/wp-content/uploads/Faig_1511.jpg" alt="">
         <div class="stage__shade"></div>
         <button class="stage__play" id="stagePlay" aria-label="Film abspielen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
-        <div class="stage__meta"><span id="stageNo">Film 01</span><b id="stageTitle">Faig – Naturstein</b></div>
+        <div class="stage__meta"><span id="stageNo">Film 01</span><b id="stageTitle">Vom Aufmaß zur Maschine</b></div>
         <div class="stage__frame" id="stageFrame"></div>
         <a class="stage__ext" id="stageExt" href="#" target="_blank" rel="noopener">Im neuen Tab öffnen ↗</a>
       </div>
 
       <ol class="playlist" id="playlist">
-        <li><button class="pl is-active" data-n="1" data-poster="https://faig.de/wp-content/uploads/Faig_1511.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-001&player=n&partnerid=RED3953842857"><span class="pl__n">01</span><span class="pl__t">Film 01</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
-        <li><button class="pl" data-n="2" data-poster="https://faig.de/wp-content/uploads/Faig_1523.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-002&player=n&partnerid=RED3953842857"><span class="pl__n">02</span><span class="pl__t">Film 02</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
-        <li><button class="pl" data-n="3" data-poster="https://faig.de/wp-content/uploads/Faig_Kueche-Woodstone.jpeg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-003&player=n&partnerid=RED3953842857"><span class="pl__n">03</span><span class="pl__t">Film 03</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
-        <li><button class="pl" data-n="4" data-poster="https://faig.de/wp-content/uploads/Faig_1522.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-004&player=n&partnerid=RED3953842857"><span class="pl__n">04</span><span class="pl__t">Film 04</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
-        <li><button class="pl" data-n="5" data-poster="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler3.jpeg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-005&player=n&partnerid=RED3953842857"><span class="pl__n">05</span><span class="pl__t">Film 05</span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl is-active" data-n="1" data-title="Vom Aufmaß zur Maschine" data-poster="https://faig.de/wp-content/uploads/Faig_1511.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-001&player=n&partnerid=RED3953842857"><span class="pl__n">01</span><span class="pl__t">Vom Aufmaß zur Maschine<small>Film 01</small></span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl" data-n="2" data-title="CNC-Bearbeitung" data-poster="https://faig.de/wp-content/uploads/Faig_1523.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-002&player=n&partnerid=RED3953842857"><span class="pl__n">02</span><span class="pl__t">CNC-Bearbeitung<small>Film 02</small></span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl" data-n="3" data-title="Wasserstrahlschneiden" data-poster="https://faig.de/wp-content/uploads/Faig_Kueche-Woodstone.jpeg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-003&player=n&partnerid=RED3953842857"><span class="pl__n">03</span><span class="pl__t">Wasserstrahlschneiden<small>Film 03</small></span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl" data-n="4" data-title="Sägen &amp; Fräsen" data-poster="https://faig.de/wp-content/uploads/Faig_1522.jpg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-004&player=n&partnerid=RED3953842857"><span class="pl__n">04</span><span class="pl__t">Sägen &amp; Fräsen<small>Film 04</small></span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
+        <li><button class="pl" data-n="5" data-title="Zuschnitt mit der Steinsäge" data-poster="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler3.jpeg" data-src="https://GelbeSeiten.v4all.de/HDPlayer.php?autostart=true&target=v106/GS/1030534/1030534-005&player=n&partnerid=RED3953842857"><span class="pl__n">05</span><span class="pl__t">Zuschnitt mit der Steinsäge<small>Film 05</small></span><span class="pl__i"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></li>
         <li><button class="pl pl--tour" data-n="360" data-poster="https://faig.de/wp-content/uploads/Rohplattenhalle-final-012_ret.jpg" data-src="https://tourmkr.com/F1i0JTB1pa"><span class="pl__n">360°</span><span class="pl__t">Virtueller Rundgang<small>Ausstellung &amp; Rohplattenhalle</small></span><span class="pl__i"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.4" ry="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 12h16" stroke="currentColor" stroke-width="1.6"/></svg></span></button></li>
       </ol>
     </div>
@@ -245,7 +254,7 @@
   <div class="wrap process__grid">
     <div class="process__side">
       <p class="eyebrow" data-reveal><span class="line"></span>Handwerk &amp; Manufaktur</p>
-      <h2 class="h2" data-split>Vom Aufmaß <em>zur Montage.</em></h2>
+      <h2 class="h2" data-split>Vom Aufmaß zur <em>Montage.</em></h2>
       <p class="lead" data-reveal>Moderne CNC-Technik trifft Steinmetzhandwerk. Planung, Fertigung und Einbau liegen bei uns in einer Hand – termingerecht und mit Partnerbetrieben aus der Region.</p>
       <figure class="reveal-img process__img"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_1177.jpg" alt="Fertigung in der Faig Manufaktur"></div></figure>
     </div>
@@ -265,7 +274,7 @@
   <div class="showroom__shade"></div>
   <div class="wrap showroom__in">
     <p class="eyebrow" data-reveal><span class="line"></span>Ausstellung</p>
-    <h2 class="h1" data-split>Den Stein <em>vorher sehen.</em></h2>
+    <h2 class="h1" data-split>Den Stein vorher <em>sehen.</em></h2>
     <div class="showroom__cols">
       <p class="lead" data-reveal>Aus rund 5.000 m² Rohplatten wählen Sie Ihren Stein selbst aus – auf etwa 1.000 m² Ausstellungsfläche, mit rund 280 Sorten und persönlicher Beratung.</p>
       <ul class="hours" data-reveal>
@@ -283,7 +292,7 @@
   <div class="wrap story__grid">
     <div class="story__txt">
       <p class="eyebrow" data-reveal><span class="line"></span>Unternehmen</p>
-      <h2 class="h2" data-split>Steinmetze <em>seit 1860.</em></h2>
+      <h2 class="h2" data-split>Steinmetze seit <em>1860.</em></h2>
       <p class="lead" data-reveal>Gegründet 1860, heute in fünfter Generation: Was mit Grabsteinen begann, ist heute vor allem Innenausbau – Bäder, Küchenarbeitsplatten, Kaminverkleidungen, Treppen und Böden. Außerdem liefern wir Findlinge.</p>
       <ul class="trust" data-reveal>
         <li>Familienbetrieb</li>
@@ -342,15 +351,16 @@
   <div class="wrap contact__grid">
     <div class="contact__txt">
       <p class="eyebrow" data-reveal><span class="line"></span>Kontakt</p>
-      <h2 class="h1" data-split>Sprechen wir <em>über Stein.</em></h2>
+      <h2 class="h1" data-split>Sprechen wir über <em>Stein.</em></h2>
       <p class="lead" data-reveal>Fragen oder Wünsche zu Natursteinlösungen? Wir beraten Sie gern – am besten nach Terminvereinbarung.</p>
 
-      <dl class="facts" data-reveal>
-        <div><dt>Telefon</dt><dd><a href="tel:+4990902450">+49 (0) 9090 2450</a></dd></div>
-        <div><dt>E-Mail</dt><dd><a href="mailto:info@faig.de">info@faig.de</a></dd></div>
-        <div><dt>Ausstellung, Produktion &amp; Abholung</dt><dd>Neuhofweg 10<br>86641 Rain am Lech</dd></div>
-        <div><dt>Anlieferung</dt><dd>Salbeiweg 15<br>86641 Rain am Lech<br><small>Gewerbegebiet Moosweide</small></dd></div>
-      </dl>
+      <ul class="facts" data-reveal>
+        <li><span class="fact__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><div><span class="fact__l">Telefon</span><a href="tel:+4990902450">+49 (0) 9090 2450</a></div></li>
+        <li><span class="fact__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><span class="fact__l">E-Mail</span><a href="mailto:info@faig.de">info@faig.de</a></div></li>
+        <li><span class="fact__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><span class="fact__l">Ausstellung, Produktion &amp; Abholung</span><p>Neuhofweg 10<br>86641 Rain am Lech</p></div></li>
+        <li><span class="fact__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l4 3v4h-8z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><div><span class="fact__l">Anlieferung</span><p>Salbeiweg 15<br>86641 Rain am Lech<br><small>Gewerbegebiet Moosweide</small></p></div></li>
+        <li class="facts__wide"><span class="fact__ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><span class="fact__l">Öffnungszeiten</span><p>Mo–Do 08:00–12:00 · 13:00–17:30<br>Fr 08:00–14:00 · sonst nach Vereinbarung</p></div></li>
+      </ul>
     </div>
 
     <form class="form" id="form" data-reveal novalidate>
@@ -370,7 +380,7 @@
 </section>
 </main>
 
-<footer class="foot">
+<footer class="foot is-light">
   <div class="wrap foot__in">
     <div class="foot__brand">
       <img src="https://faig.de/wp-content/uploads/faig-logo.jpg" alt="Faig – Gestalten mit Stein" width="237" height="112">
@@ -399,6 +409,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-<script src="script.js?v=3"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>
