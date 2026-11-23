@@ -8,9 +8,9 @@
 <meta name="referrer" content="no-referrer">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Rock+Salt&family=Titillium+Web:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add("js")</script>
-<link rel="stylesheet" href="style.css?v=22">
+<link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
 
@@ -42,71 +42,67 @@
 
 <main id="inhalt">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero__text">
-    <p class="hero__kicker">Steinmetzbetrieb Karl Faig, Rain am Lech. Seit 1860.</p>
+<!-- HERO (pinned: photo grows to full screen while scrolling) -->
+<div class="hero-pin" id="heroPin">
+<section class="hero" id="hero">
+  <div class="hero__media" id="heroMedia">
+    <img id="heroImg" src="https://faig.de/wp-content/uploads/Faig_1511.jpg" alt="Waschtisch mit Rückwand aus Quarzit" fetchpriority="high">
+    <div class="hero__shade"></div>
+    <p class="hero__cap" id="heroCap">Waschtisch mit Rückwand aus Quarzit</p>
+    <div class="hero__over" aria-hidden="true">
+      <p class="hero__over-script">Gestalten mit Stein</p>
+      <p class="hero__over-title">Ausführung mit größter Handwerkskunst.</p>
+    </div>
+  </div>
+
+  <div class="hero__text" id="heroText">
+    <p class="hero__script">Steinmetze seit 1860</p>
     <h1 class="hero__title"><span class="ln"><span>Gestalten</span></span><span class="ln"><span>mit Stein.</span></span></h1>
-    <p class="hero__lead">Bäder, Treppen und Küchen aus Naturstein. Geplant, auf eigenen CNC-Anlagen gefertigt und montiert von einem Familienbetrieb in fünfter Generation.</p>
+    <p class="hero__lead">Bäder, Treppen und Küchen aus Naturstein. Geplant, auf eigenen CNC-Anlagen gefertigt und montiert vom Familienbetrieb Karl Faig in Rain am Lech, in fünfter Generation.</p>
     <div class="hero__actions">
       <a href="#kontakt" class="btn btn--solid">Beratungstermin vereinbaren</a>
       <a href="#projekte" class="btn btn--line">Projekte ansehen</a>
     </div>
-
     <div class="picker" role="tablist" aria-label="Projekt im Bild wählen">
-      <button class="picker__item is-active" role="tab" aria-selected="true" data-src="https://faig.de/wp-content/uploads/Faig_1511.jpg" data-caption="Waschtisch mit Rückwand aus Quarzit">
-        <span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig_1511.jpg')"></span>
-        <span class="picker__bar"></span><span class="picker__label">Bad</span>
-      </button>
-      <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/Faig_1450.jpg" data-caption="Bodengleiche Dusche, Wand und Boden aus einem Stein">
-        <span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig_1450.jpg')"></span>
-        <span class="picker__bar"></span><span class="picker__label">Dusche</span>
-      </button>
-      <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/startbild-wendeltreppe.jpg" data-caption="Wendeltreppe mit Natursteinstufen">
-        <span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/startbild-wendeltreppe.jpg')"></span>
-        <span class="picker__bar"></span><span class="picker__label">Treppe</span>
-      </button>
-      <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/Faig-Kueche_Taj-Mahal.jpeg" data-caption="Küche mit Arbeitsplatte aus Taj Mahal Quarzit">
-        <span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig-Kueche_Taj-Mahal.jpeg')"></span>
-        <span class="picker__bar"></span><span class="picker__label">Küche</span>
-      </button>
+      <button class="picker__item is-active" role="tab" aria-selected="true" data-src="https://faig.de/wp-content/uploads/Faig_1511.jpg" data-caption="Waschtisch mit Rückwand aus Quarzit"><span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig_1511.jpg')"></span><span class="picker__bar"></span><span class="picker__label">Bad</span></button>
+      <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/Faig_1450.jpg" data-caption="Bodengleiche Dusche, Wand und Boden aus einem Stein"><span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig_1450.jpg')"></span><span class="picker__bar"></span><span class="picker__label">Dusche</span></button>
+      <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/startbild-wendeltreppe.jpg" data-caption="Wendeltreppe mit Natursteinstufen"><span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/startbild-wendeltreppe.jpg')"></span><span class="picker__bar"></span><span class="picker__label">Treppe</span></button>
+      <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/Faig-Kueche_Taj-Mahal.jpeg" data-caption="Küche mit Arbeitsplatte aus Taj Mahal Quarzit"><span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig-Kueche_Taj-Mahal.jpeg')"></span><span class="picker__bar"></span><span class="picker__label">Küche</span></button>
     </div>
   </div>
+  <div class="hero__slot" id="heroSlot" aria-hidden="true"></div>
+</section>
+</div>
 
-  <figure class="hero__media">
-    <div class="hero__frame">
-      <img id="heroImg" src="https://faig.de/wp-content/uploads/Faig_1511.jpg" alt="Waschtisch mit Rückwand aus Quarzit" fetchpriority="high">
-    </div>
-    <figcaption id="heroCap">Waschtisch mit Rückwand aus Quarzit</figcaption>
-  </figure>
+<!-- STATEMENT (words light up while scrolling) -->
+<section class="statement">
+  <p class="statement__text" id="statement">Seit 1860 arbeitet unsere Familie mit Naturstein. Heute in fünfter Generation, mit 280 Sorten im eigenen Lager und modernen CNC-Anlagen in Rain am Lech. Für Bäder, Treppen und Küchen, die ein Leben lang Freude machen.</p>
 </section>
 
-<!-- BÄDER -->
-<section class="block" id="baeder">
-  <div class="intro-row">
-    <h2>Bäder aus Naturstein</h2>
-    <div class="intro-row__copy">
-      <p>Waschtischplatten, Wannen- und Badverkleidungen, Duschwände und Böden. Wir planen ein Bad als Ganzes und schneiden Wand, Boden und Waschtisch so aus den Rohplatten, dass die Maserung durch den Raum läuft.</p>
-      <p>Natürliche Materialien sorgen für ein angenehmes Raumklima. Und weil jede Platte anders gewachsen ist, wird jedes Bad ein Einzelstück.</p>
+<!-- BÄDER (pinned horizontal gallery) -->
+<section class="hs" id="baeder">
+  <div class="hs__sticky">
+    <div class="hs__track" id="hsTrack">
+      <div class="hs__intro">
+        <h2>Bäder aus Naturstein</h2>
+        <p>Waschtischplatten, Wannen- und Badverkleidungen, Duschwände und Böden. Wir schneiden Wand, Boden und Waschtisch so aus den Rohplatten, dass die Maserung durch den Raum läuft.</p>
+        <p class="hs__hint">Scrollen Sie weiter, um die Bäder zu sehen.</p>
+      </div>
+      <figure class="hs__item hs__item--land" data-lb><div class="hs__frame"><img src="https://faig.de/wp-content/uploads/Faig_1540.jpg" alt="Nische mit Rückwand aus Quarzit" loading="lazy"></div><figcaption><span>01</span>Nische mit Rückwand aus Quarzit</figcaption></figure>
+      <figure class="hs__item hs__item--port" data-lb><div class="hs__frame"><img src="https://faig.de/wp-content/uploads/Faig_1523.jpg" alt="Wandverkleidung, raumhoch" loading="lazy"></div><figcaption><span>02</span>Wandverkleidung, raumhoch</figcaption></figure>
+      <figure class="hs__item hs__item--land" data-lb><div class="hs__frame"><img src="https://faig.de/wp-content/uploads/Faig_1546.jpg" alt="Duschwand aus einer Platte" loading="lazy"></div><figcaption><span>03</span>Duschwand aus einer Platte</figcaption></figure>
+      <figure class="hs__item hs__item--port" data-lb><div class="hs__frame"><img src="https://faig.de/wp-content/uploads/Faig_1450.jpg" alt="Walk-in-Dusche in dunklem Marmor" loading="lazy"></div><figcaption><span>04</span>Walk-in-Dusche in dunklem Marmor</figcaption></figure>
+      <figure class="hs__item hs__item--land" data-lb><div class="hs__frame"><img src="https://faig.de/wp-content/uploads/Faig_1455.jpg" alt="Waschtischplatte mit Aufsatzbecken" loading="lazy"></div><figcaption><span>05</span>Waschtischplatte mit Aufsatzbecken</figcaption></figure>
+      <figure class="hs__item hs__item--port" data-lb><div class="hs__frame"><img src="https://faig.de/wp-content/uploads/Faig_1449.jpg" alt="Dunkler Marmor, matt geschliffen" loading="lazy"></div><figcaption><span>06</span>Dunkler Marmor, matt geschliffen</figcaption></figure>
+      <figure class="hs__item hs__item--land" data-lb><div class="hs__frame"><img src="https://faig.de/wp-content/uploads/Faig_1534.jpg" alt="Boden und Wand aus derselben Platte" loading="lazy"></div><figcaption><span>07</span>Boden und Wand aus derselben Platte</figcaption></figure>
+      <figure class="hs__item hs__item--land" data-lb><div class="hs__frame"><img src="https://faig.de/wp-content/uploads/Faig_1464.jpg" alt="Badmöbel mit Natursteinplatte" loading="lazy"></div><figcaption><span>08</span>Badmöbel mit Natursteinplatte</figcaption></figure>
     </div>
+    <div class="hs__progress"><span id="hsCount">01 / 08</span><div class="hs__bar"><i id="hsBar"></i></div></div>
   </div>
+</section>
 
-  <div class="row row--8-4">
-    <figure class="pic" data-lb><img src="https://faig.de/wp-content/uploads/Faig_1540.jpg" alt="Waschtischnische mit Natursteinrückwand und Eichenmöbel" loading="lazy"><figcaption>Nische mit Rückwand aus Quarzit</figcaption></figure>
-    <figure class="pic" data-lb><img src="https://faig.de/wp-content/uploads/Faig_1523.jpg" alt="Wandverkleidung aus Quarzit hinter dem WC" loading="lazy"><figcaption>Wandverkleidung, raumhoch</figcaption></figure>
-  </div>
-
-  <div class="row row--3">
-    <figure class="pic pic--portrait" data-lb><img src="https://faig.de/wp-content/uploads/Faig_1546.jpg" alt="Dusche mit Quarzitwand" loading="lazy" style="object-position:60% 50%"><figcaption>Duschwand aus einer Platte</figcaption></figure>
-    <figure class="pic pic--portrait" data-lb><img src="https://faig.de/wp-content/uploads/Faig_1449.jpg" alt="Bad mit dunklem Naturstein" loading="lazy"><figcaption>Dunkler Marmor, matt geschliffen</figcaption></figure>
-    <figure class="pic pic--portrait" data-lb><img src="https://faig.de/wp-content/uploads/Faig_1455.jpg" alt="Waschtisch aus dunklem Marmor mit Aufsatzbecken" loading="lazy" style="object-position:45% 50%"><figcaption>Waschtischplatte mit Aufsatzbecken</figcaption></figure>
-  </div>
-
-  <div class="row row--pano">
-    <figure class="pic" data-lb><img data-parallax src="https://faig.de/wp-content/uploads/Faig_1534.jpg" alt="Boden und Wand aus Quarzit, Detail der Maserung" loading="lazy"><figcaption>Boden und Wand aus derselben Platte geschnitten</figcaption></figure>
-  </div>
-
-  <aside class="note">
+<section class="block block--tight">
+<aside class="note">
     <div class="note__pics">
       <figure class="pic" data-lb><img src="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler3.jpeg" alt="Hinterleuchtete Natursteinwand in einer Wellnessdusche" loading="lazy"></figure>
       <figure class="pic" data-lb><img src="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler2.jpeg" alt="Hinterleuchteter Onyx im Wellnessbereich" loading="lazy"></figure>
@@ -127,7 +123,7 @@
 
 <!-- TREPPEN -->
 <section class="block block--slate" id="treppen">
-  <figure class="pano" data-lb><img data-parallax src="https://faig.de/wp-content/uploads/startbild-eingangsbereich.jpg" alt="Eingangsbereich mit Natursteintreppe und Natursteinboden" loading="lazy"></figure>
+  <figure class="pano" data-lb><img src="https://faig.de/wp-content/uploads/startbild-eingangsbereich.jpg" alt="Eingangsbereich mit Natursteintreppe und Natursteinboden" loading="lazy"></figure>
   <div class="row row--text-2">
     <div class="textcol">
       <h2>Treppen</h2>
@@ -173,7 +169,7 @@
 
 <!-- AUSSTELLUNG -->
 <section class="showroom" id="ausstellung">
-  <div class="showroom__media"><img class="showroom__img" data-parallax src="https://faig.de/wp-content/uploads/Rohplattenhalle-final-012_ret.jpg" alt="Rohplattenhalle mit Natursteinplatten in Rain am Lech" loading="lazy"></div>
+  <div class="showroom__media" id="showMedia"><img class="showroom__img" src="https://faig.de/wp-content/uploads/Rohplattenhalle-final-012_ret.jpg" alt="Rohplattenhalle mit Natursteinplatten in Rain am Lech" loading="lazy"></div>
   <div class="showroom__panel">
     <h2>Den Stein vorher sehen</h2>
     <p>Im Materiallager in Rain am Lech wählen Sie Ihre Platte selbst aus. Naturstein aus nahezu allen Teilen der Welt, mit persönlicher Beratung.</p>
@@ -259,6 +255,6 @@
 </div>
 
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="script.js?v=22"></script>
+<script src="script.js?v=30"></script>
 </body>
 </html>
