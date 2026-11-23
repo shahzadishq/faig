@@ -204,8 +204,6 @@
       } });
     });
 
-    /* showroom bg parallax */
-    gsap.fromTo("#showImg", { yPercent: -6, scale: 1.1 }, { yPercent: 6, scale: 1.02, ease: "none", scrollTrigger: { trigger: ".showroom", start: "top bottom", end: "bottom top", scrub: true } });
 
     /* big year */
     gsap.fromTo("#bigYear", { yPercent: 25 }, { yPercent: -5, ease: "none", scrollTrigger: { trigger: ".story", start: "top bottom", end: "bottom bottom", scrub: true } });
@@ -237,8 +235,11 @@
         scrollTrigger: { trigger: ".hs__sticky", start: "top top", end: function () { return "+=" + dist(); }, pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1,
           onUpdate: function (self) { barEl.style.transform = "scaleX(" + self.progress + ")"; } }
       });
-      $$(".panel > :not(.panel__img)").forEach(function (t) {
-        gsap.from(t, { opacity: 0, y: 34, duration: 1, ease: "expo.out", scrollTrigger: { trigger: t, containerAnimation: tween, start: "left 78%", toggleActions: "play none none none" } });
+      var panels = $$(".panel"), first = [], rest = [];
+      panels.forEach(function (p) { (p.getBoundingClientRect().left < window.innerWidth * 0.92 ? first : rest).push(p); });
+      gsap.fromTo(first, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.3, delay: .55, stagger: .16, ease: "expo.out", scrollTrigger: { trigger: "#leistungen", start: "top 76%", once: true } });
+      rest.forEach(function (p) {
+        gsap.fromTo(p, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.2, ease: "expo.out", scrollTrigger: { trigger: p, containerAnimation: tween, start: "left 88%", toggleActions: "play none none none" } });
       });
       $$(".panel__img img").forEach(function (img) {
         gsap.fromTo(img, { scale: 1.25, xPercent: -6 }, { scale: 1.05, xPercent: 6, ease: "none", scrollTrigger: { trigger: img.closest(".panel"), containerAnimation: tween, start: "left right", end: "right left", scrub: true } });
@@ -292,35 +293,12 @@
 
   /* ---------- films ---------- */
   function initShowroomLab() {
-    /* B: slab picker */
-    var bs = $$(".pick__b"), a = $("#pickImg"), b2 = $("#pickImg2"), front = a, back = b2;
-    bs.forEach(function (bt) {
-      bt.addEventListener("click", pick); bt.addEventListener("mouseenter", function () { if (window.matchMedia("(hover:hover)").matches) pick.call(bt); });
-      function pick() {
-        if (bt.classList.contains("is-active")) return;
-        bs.forEach(function (x) { x.classList.toggle("is-active", x === bt); });
-        back.src = bt.dataset.img; back.alt = bt.dataset.name;
-        back.style.opacity = 1; front.style.opacity = 0;
-        var t = front; front = back; back = t;
-        gsap.fromTo("#pickView figcaption", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: .7, ease: "expo.out" });
-        $("#pickName").textContent = bt.dataset.name; $("#pickUse").textContent = bt.dataset.use; $("#pickTxt").textContent = bt.dataset.txt;
-      }
-    });
     /* C: walkthrough */
     var wi = $$(".walk__img"), ws = $$(".walk__s"), wd = $$("#walkDots i"), wn = $("#walkNo"), cur = -1;
     function setWalk(i) { if (i === cur) return; cur = i; wi.forEach(function (x, k) { x.classList.toggle("is-on", k === i); }); ws.forEach(function (x, k) { x.classList.toggle("is-on", k === i); }); wd.forEach(function (x, k) { x.classList.toggle("is-on", k === i); }); wn.textContent = "0" + (i + 1); }
     if (!reduce && window.matchMedia("(min-width: 900px)").matches) {
       ScrollTrigger.create({ trigger: ".walk", start: "top top", end: "+=" + (ws.length * 70) + "%", pin: ".walk__sticky", onUpdate: function (s) { setWalk(Math.min(ws.length - 1, Math.floor(s.progress * ws.length))); } });
     }
-    /* D: before/after */
-    var box = $("#baBox"), bf = $("#baBefore"), hd = $("#baHandle"), drag = false;
-    function setBA(p) { p = Math.max(0, Math.min(100, p)); bf.style.clipPath = "inset(0 " + (100 - p) + "% 0 0)"; hd.style.left = p + "%"; hd.setAttribute("aria-valuenow", Math.round(p)); }
-    function mv(e) { var r = box.getBoundingClientRect(); setBA((e.clientX - r.left) / r.width * 100); }
-    box.addEventListener("pointerdown", function (e) { drag = true; box.setPointerCapture(e.pointerId); mv(e); });
-    box.addEventListener("pointermove", function (e) { if (drag) mv(e); });
-    box.addEventListener("pointerup", function () { drag = false; });
-    hd.addEventListener("keydown", function (e) { var v = +hd.getAttribute("aria-valuenow"); if (e.key === "ArrowLeft") setBA(v - 5); if (e.key === "ArrowRight") setBA(v + 5); });
-    ScrollTrigger.create({ trigger: box, start: "top 70%", once: true, onEnter: function () { var o = { v: 50 }; gsap.fromTo(o, { v: 50 }, { v: 50, duration: 0 }); gsap.to(o, { v: 22, duration: .9, ease: "power2.inOut", onUpdate: function () { setBA(o.v); } }); gsap.to(o, { v: 50, duration: 1, delay: .9, ease: "power2.inOut", onUpdate: function () { setBA(o.v); } }); } });
   }
 
   function initFilms() {
