@@ -172,8 +172,13 @@
     gsap.to($$(".w", st), { opacity: 1, stagger: .1, ease: "none", scrollTrigger: { trigger: st, start: "top 82%", end: "bottom 55%", scrub: .6 } });
 
     /* generic reveal */
-    ScrollTrigger.batch("[data-reveal]", {
+    ScrollTrigger.batch("[data-reveal]:not(.foot [data-reveal])", {
       start: "top 76%", once: true,
+      onEnter: function (els) { gsap.to(els, { opacity: 1, y: 0, duration: 1.1, ease: "expo.out", stagger: .12 }); }
+    });
+    /* footer sits at the very end of the page, so it can never reach 76%: trigger as soon as it peeks in */
+    ScrollTrigger.batch(".foot [data-reveal]", {
+      start: "top 99%", once: true,
       onEnter: function (els) { gsap.to(els, { opacity: 1, y: 0, duration: 1.1, ease: "expo.out", stagger: .12 }); }
     });
 
