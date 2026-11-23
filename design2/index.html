@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Rock+Salt&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add("js")</script>
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -19,11 +19,13 @@
 
 <!-- LOADER -->
 <div class="loader" id="loader" aria-hidden="true">
-  <div class="loader__inner">
+  <div class="loader__half loader__half--l"></div>
+  <div class="loader__half loader__half--r"></div>
+  <svg class="loader__crack" viewBox="0 0 100 100" preserveAspectRatio="none"><path id="crackPath" d="M50 0 L47 14 L53 27 L46 41 L54 55 L47 69 L52 83 L49 100" pathLength="1"/></svg>
+  <div class="loader__plaque" id="loaderPlaque">
     <span class="loader__mark">FAIG</span>
     <span class="loader__sub">Steinmetze seit 1860</span>
-    <span class="loader__bar"><i id="loaderBar"></i></span>
-    <span class="loader__count" id="loaderCount">0</span>
+    <span class="loader__count"><b id="loaderCount">0</b>%</span>
   </div>
 </div>
 
@@ -140,8 +142,8 @@
 <section class="hs" id="leistungen">
   <div class="hs__sticky">
     <header class="hs__head wrap">
-      <p class="eyebrow"><span class="line"></span>Leistungen</p>
-      <h2 class="h2">Wo Stein <em>wohnt.</em></h2>
+      <p class="eyebrow" data-reveal><span class="line"></span>Leistungen</p>
+      <h2 class="h2" data-split>Wo Stein <em>wohnt.</em></h2>
     </header>
     <div class="hs__viewport">
       <div class="hs__track" id="hsTrack">
@@ -205,8 +207,8 @@
 <section class="light section is-light" id="licht">
   <div class="wrap light__grid">
     <div class="light__imgs">
-      <figure class="reveal-img light__a"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler3.jpeg" alt="Hinterleuchteter Naturstein im Wellnessbereich"></div></figure>
-      <figure class="reveal-img light__b"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler2.jpeg" alt="Wellnessbereich mit Naturstein"></div></figure>
+      <figure class="reveal-img light__a"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig-Kueche_Patagonia-hinterleuchtet.jpeg" alt="Küche mit hinterleuchteter Arbeitsplatte aus Patagonia"></div></figure>
+      <figure class="reveal-img light__b"><div class="par"><img loading="lazy" src="https://faig.de/wp-content/uploads/Faig_Wellnes_Adler3.jpeg" alt="Hinterleuchteter Naturstein im Wellnessbereich"></div></figure>
     </div>
     <div class="light__txt">
       <p class="eyebrow" data-reveal><span class="line"></span>Besonderes</p>
@@ -315,7 +317,7 @@
         <p class="eyebrow" data-reveal><span class="line"></span>Referenzen</p>
         <h2 class="h2" data-split>Ausgewählte <em>Projekte.</em></h2>
       </div>
-      <div class="chips" id="chips" role="tablist" aria-label="Projekte filtern">
+      <div class="chips" id="chips" data-reveal role="tablist" aria-label="Projekte filtern">
         <button class="chip is-on" data-f="all">Alle</button>
         <button class="chip" data-f="bad">Bäder</button>
         <button class="chip" data-f="kueche">Küchen</button>
@@ -382,18 +384,18 @@
 
 <footer class="foot is-light">
   <div class="wrap foot__in">
-    <div class="foot__brand">
+    <div class="foot__brand" data-reveal>
       <img src="https://faig.de/wp-content/uploads/faig-logo.jpg" alt="Faig – Gestalten mit Stein" width="237" height="112">
       <p>Karl Faig GmbH · Steinmetzbetrieb<br>Neuhofweg 10 · 86641 Rain am Lech</p>
     </div>
-    <nav class="foot__nav" aria-label="Rechtliches">
+    <nav class="foot__nav" data-reveal aria-label="Rechtliches">
       <a href="https://faig.de/impressum/" target="_blank" rel="noopener">Impressum</a>
       <a href="https://faig.de/allgemeine-geschaeftsbedingungen/" target="_blank" rel="noopener">AGB</a>
       <a href="https://faig.de/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a>
       <a href="https://faig.de/karriere-stellenanzeige/" target="_blank" rel="noopener">Karriere</a>
       <a href="https://faig.de/natursteinpflege/" target="_blank" rel="noopener">Natursteinpflege</a>
     </nav>
-    <p class="foot__copy">© <span id="yr">2026</span> Karl Faig GmbH</p>
+    <p class="foot__copy" data-reveal>© <span id="yr">2026</span> Karl Faig GmbH</p>
   </div>
 </footer>
 
@@ -409,6 +411,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-<script src="script.js?v=6"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>
