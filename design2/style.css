@@ -221,7 +221,7 @@ em{font-style:italic;color:var(--brass-l)}
 .films__head{max-width:760px;margin-bottom:clamp(40px,6vw,80px)}
 .films__head .lead{margin-top:28px}
 .films__grid{display:grid;grid-template-columns:1fr 340px;gap:clamp(20px,2.4vw,36px);align-items:stretch}
-.stage{position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#000;box-shadow:0 40px 100px rgba(0,0,0,.55)}
+.stage{width:100%;min-width:0;align-self:start;position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#000;box-shadow:0 40px 100px rgba(0,0,0,.55)}
 .stage__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease),opacity .6s}
 .stage:hover .stage__poster{transform:scale(1.04)}
 .stage__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,13,12,.2),rgba(14,13,12,.7))}
@@ -241,8 +241,8 @@ em{font-style:italic;color:var(--brass-l)}
 .stage.is-playing .stage__ext{display:block}
 .stage.is-playing .stage__poster,.stage.is-playing .stage__shade,.stage.is-playing .stage__play,.stage.is-playing .stage__meta{display:none}
 .stage.is-playing{cursor:auto}
-.playlist{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}.playlist li{display:block}
-.pl{min-height:86px;width:100%;display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:14px;text-align:left;padding:16px 20px;border:1px solid var(--line);border-radius:6px;background:rgba(244,238,228,.02);transition:border-color .4s,background .4s,transform .5s var(--ease)}
+.playlist{display:flex;flex-direction:column;justify-content:space-between;gap:10px;margin:0;padding:0;list-style:none}.playlist li{display:block}
+.pl{min-height:70px;width:100%;display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:14px;text-align:left;padding:16px 20px;border:1px solid var(--line);border-radius:6px;background:rgba(244,238,228,.02);transition:border-color .4s,background .4s,transform .5s var(--ease)}
 .pl:hover{border-color:var(--brass);background:rgba(184,146,90,.07)}
 .pl.is-active{border-color:var(--brass);background:rgba(184,146,90,.1)}
 .pl__n{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--brass-l)}
