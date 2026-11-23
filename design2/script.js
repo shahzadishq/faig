@@ -291,6 +291,8 @@
       frame.innerHTML = ""; frame.appendChild(f);
       ext.href = src.replace("autostart=true", "autostart=false");
       stage.classList.add("is-playing");
+      stage.removeAttribute("data-cursor");
+      var c = $("#cursor"); if (c) c.classList.remove("is-big");
     }
     btns.forEach(function (b) { b.addEventListener("click", function () { select(b, true); if (window.innerWidth < 1000) scrollToEl(stage); }); });
     $("#stagePlay").addEventListener("click", function () { start(); });

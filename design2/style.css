@@ -119,9 +119,10 @@ em{font-style:italic;color:var(--brass-l)}
 .hero__lead{max-width:44ch;font-size:clamp(16px,1.35vw,20px);color:var(--sand);line-height:1.6}
 .hero__actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
 .seal{position:absolute;right:var(--pad);top:clamp(110px,18vh,190px);width:clamp(110px,12vw,170px);aspect-ratio:1;display:grid;place-items:center;z-index:2}
-.seal svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 28s linear infinite}
+.seal svg{z-index:1;position:absolute;inset:0;width:100%;height:100%;animation:spin 28s linear infinite}
 .seal text{font-family:var(--sans);font-size:11.4px;letter-spacing:.2em;text-transform:uppercase;fill:var(--sand);font-weight:500}
-.seal b{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,40px);color:var(--brass-l)}
+.seal::before{content:"";position:absolute;inset:-6px;border-radius:50%;background:rgba(14,13,12,.55);backdrop-filter:blur(6px);border:1px solid rgba(244,238,228,.12)}
+.seal b{position:relative;font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,40px);color:var(--brass-l)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .scrollcue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--sand)}
 .scrollcue i{width:1px;height:46px;background:linear-gradient(var(--brass-l),transparent);transform-origin:top;animation:cue 2.2s var(--ease) infinite}
@@ -272,7 +273,7 @@ em{font-style:italic;color:var(--brass-l)}
 .story__txt .lead{margin:28px 0 30px}
 .trust{display:flex;flex-wrap:wrap;gap:10px}
 .trust li{font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--sand)}
-.story__img{aspect-ratio:4/5;position:relative;overflow:hidden}
+.story__img{aspect-ratio:4/3.4;position:relative;overflow:hidden}
 .story__img figcaption{position:absolute;left:0;right:0;bottom:0;padding:50px 22px 18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(transparent,rgba(14,13,12,.85));z-index:2}
 .bigyear{position:absolute;left:0;right:0;bottom:-.18em;text-align:center;font-family:var(--serif);font-weight:300;font-size:clamp(160px,32vw,520px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(244,238,228,.09);pointer-events:none;user-select:none;white-space:nowrap}
 @media (max-width:860px){.story__grid{grid-template-columns:1fr}}
