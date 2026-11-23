@@ -232,7 +232,7 @@
       var dist = function () { return Math.max(0, track.scrollWidth - window.innerWidth + 0); };
       var tween = gsap.to(track, {
         x: function () { return -dist(); }, ease: "none",
-        scrollTrigger: { trigger: ".hs__sticky", start: "top top", end: function () { return "+=" + dist(); }, pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1,
+        scrollTrigger: { trigger: ".hs__sticky", start: "top top", end: function () { return "+=" + dist(); }, pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1, refreshPriority: 2,
           onUpdate: function (self) { barEl.style.transform = "scaleX(" + self.progress + ")"; } }
       });
       var panels = $$(".panel"), first = [], rest = [];
@@ -297,7 +297,7 @@
     var wi = $$(".walk__img"), ws = $$(".walk__s"), wd = $$("#walkDots i"), wn = $("#walkNo"), cur = -1;
     function setWalk(i) { if (i === cur) return; cur = i; wi.forEach(function (x, k) { x.classList.toggle("is-on", k === i); }); ws.forEach(function (x, k) { x.classList.toggle("is-on", k === i); }); wd.forEach(function (x, k) { x.classList.toggle("is-on", k === i); }); wn.textContent = "0" + (i + 1); }
     if (!reduce && window.matchMedia("(min-width: 900px)").matches) {
-      ScrollTrigger.create({ trigger: ".walk", start: "top top", end: "+=" + (ws.length * 70) + "%", pin: ".walk__sticky", onUpdate: function (s) { setWalk(Math.min(ws.length - 1, Math.floor(s.progress * ws.length))); } });
+      ScrollTrigger.create({ trigger: ".walk", start: "top top", end: "+=" + (ws.length * 70) + "%", pin: ".walk__sticky", refreshPriority: 1, onUpdate: function (s) { setWalk(Math.min(ws.length - 1, Math.floor(s.progress * ws.length))); } });
     }
   }
 
