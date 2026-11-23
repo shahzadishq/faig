@@ -10,11 +10,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add("js")</script>
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=20">
 </head>
 <body>
 
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <img src="https://faig.de/wp-content/uploads/faig-logo.jpg" alt="" class="loader__logo">
+  <span class="loader__line"><i></i></span>
+  <span class="loader__year">seit 1860</span>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span>Ansehen</span></div>
 
 <header class="top" id="top">
   <a href="#" class="top__logo" aria-label="Faig – zur Startseite">
@@ -38,7 +46,7 @@
 <section class="hero">
   <div class="hero__text">
     <p class="hero__kicker">Steinmetzbetrieb Karl Faig, Rain am Lech. Seit 1860.</p>
-    <h1 class="hero__title">Gestalten<br>mit Stein.</h1>
+    <h1 class="hero__title"><span class="ln"><span>Gestalten</span></span><span class="ln"><span>mit Stein.</span></span></h1>
     <p class="hero__lead">Bäder, Treppen und Küchen aus Naturstein. Geplant, auf eigenen CNC-Anlagen gefertigt und montiert von einem Familienbetrieb in fünfter Generation.</p>
     <div class="hero__actions">
       <a href="#kontakt" class="btn btn--solid">Beratungstermin vereinbaren</a>
@@ -48,19 +56,19 @@
     <div class="picker" role="tablist" aria-label="Projekt im Bild wählen">
       <button class="picker__item is-active" role="tab" aria-selected="true" data-src="https://faig.de/wp-content/uploads/Faig_1511.jpg" data-caption="Waschtisch mit Rückwand aus Quarzit">
         <span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig_1511.jpg')"></span>
-        <span class="picker__label">Bad</span>
+        <span class="picker__bar"></span><span class="picker__label">Bad</span>
       </button>
       <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/Faig_1450.jpg" data-caption="Bodengleiche Dusche, Wand und Boden aus einem Stein">
         <span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig_1450.jpg')"></span>
-        <span class="picker__label">Dusche</span>
+        <span class="picker__bar"></span><span class="picker__label">Dusche</span>
       </button>
       <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/startbild-wendeltreppe.jpg" data-caption="Wendeltreppe mit Natursteinstufen">
         <span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/startbild-wendeltreppe.jpg')"></span>
-        <span class="picker__label">Treppe</span>
+        <span class="picker__bar"></span><span class="picker__label">Treppe</span>
       </button>
       <button class="picker__item" role="tab" aria-selected="false" data-src="https://faig.de/wp-content/uploads/Faig-Kueche_Taj-Mahal.jpeg" data-caption="Küche mit Arbeitsplatte aus Taj Mahal Quarzit">
         <span class="picker__thumb" style="background-image:url('https://faig.de/wp-content/uploads/Faig-Kueche_Taj-Mahal.jpeg')"></span>
-        <span class="picker__label">Küche</span>
+        <span class="picker__bar"></span><span class="picker__label">Küche</span>
       </button>
     </div>
   </div>
@@ -95,7 +103,7 @@
   </div>
 
   <div class="row row--pano">
-    <figure class="pic" data-lb><img src="https://faig.de/wp-content/uploads/Faig_1534.jpg" alt="Boden und Wand aus Quarzit, Detail der Maserung" loading="lazy"><figcaption>Boden und Wand aus derselben Platte geschnitten</figcaption></figure>
+    <figure class="pic" data-lb><img data-parallax src="https://faig.de/wp-content/uploads/Faig_1534.jpg" alt="Boden und Wand aus Quarzit, Detail der Maserung" loading="lazy"><figcaption>Boden und Wand aus derselben Platte geschnitten</figcaption></figure>
   </div>
 
   <aside class="note">
@@ -110,9 +118,16 @@
   </aside>
 </section>
 
+<div class="stones" aria-label="Natursteine aus unseren Projekten">
+  <div class="stones__track">
+    <span>Patagonia</span><span>Taj Mahal</span><span>Nero Assoluto</span><span>Irish Green</span><span>Avorio San Sebastian</span><span>Lumix</span><span>Sequoia Brown</span><span>Greystone</span><span>Woodstone</span>
+    <span aria-hidden="true">Patagonia</span><span aria-hidden="true">Taj Mahal</span><span aria-hidden="true">Nero Assoluto</span><span aria-hidden="true">Irish Green</span><span aria-hidden="true">Avorio San Sebastian</span><span aria-hidden="true">Lumix</span><span aria-hidden="true">Sequoia Brown</span><span aria-hidden="true">Greystone</span><span aria-hidden="true">Woodstone</span>
+  </div>
+</div>
+
 <!-- TREPPEN -->
 <section class="block block--slate" id="treppen">
-  <figure class="pano" data-lb><img src="https://faig.de/wp-content/uploads/startbild-eingangsbereich.jpg" alt="Eingangsbereich mit Natursteintreppe und Natursteinboden" loading="lazy"></figure>
+  <figure class="pano" data-lb><img data-parallax src="https://faig.de/wp-content/uploads/startbild-eingangsbereich.jpg" alt="Eingangsbereich mit Natursteintreppe und Natursteinboden" loading="lazy"></figure>
   <div class="row row--text-2">
     <div class="textcol">
       <h2>Treppen</h2>
@@ -158,14 +173,14 @@
 
 <!-- AUSSTELLUNG -->
 <section class="showroom" id="ausstellung">
-  <img class="showroom__img" src="https://faig.de/wp-content/uploads/Rohplattenhalle-final-012_ret.jpg" alt="Rohplattenhalle mit Natursteinplatten in Rain am Lech" loading="lazy">
+  <div class="showroom__media"><img class="showroom__img" data-parallax src="https://faig.de/wp-content/uploads/Rohplattenhalle-final-012_ret.jpg" alt="Rohplattenhalle mit Natursteinplatten in Rain am Lech" loading="lazy"></div>
   <div class="showroom__panel">
     <h2>Den Stein vorher sehen</h2>
     <p>Im Materiallager in Rain am Lech wählen Sie Ihre Platte selbst aus. Naturstein aus nahezu allen Teilen der Welt, mit persönlicher Beratung.</p>
     <dl class="facts">
-      <div><dt>280</dt><dd>Sorten Naturstein</dd></div>
-      <div><dt>5.000 m²</dt><dd>Rohsteinplatten</dd></div>
-      <div><dt>1.000 m²</dt><dd>Ausstellungsfläche</dd></div>
+      <div><dt><span data-count="280">280</span></dt><dd>Sorten Naturstein</dd></div>
+      <div><dt><span data-count="5000">5.000</span> m²</dt><dd>Rohsteinplatten</dd></div>
+      <div><dt><span data-count="1000">1.000</span> m²</dt><dd>Ausstellungsfläche</dd></div>
     </dl>
     <p class="showroom__hours">Mo bis Do 8–12 und 13–17:30 Uhr, Fr 8–14 Uhr. Bitte vereinbaren Sie für die Beratung einen Termin.</p>
     <a href="#kontakt" class="btn btn--light">Termin in der Ausstellung</a>
@@ -243,6 +258,7 @@
   <button class="lb__nav lb__next" aria-label="Nächstes Bild">›</button>
 </div>
 
-<script src="script.js?v=10"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js?v=20"></script>
 </body>
 </html>
