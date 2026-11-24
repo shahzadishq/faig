@@ -1,0 +1,32 @@
+name: Fetch faig.de images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'design2/img-list.txt'
+      - '.github/workflows/fetch-images.yml'
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download original-quality images
+        run: |
+          mkdir -p design2/img
+          while read -r url; do
+            [ -z "$url" ] && continue
+            f="design2/img/$(basename "$url")"
+            [ -s "$f" ] && continue
+            echo "GET $url"
+            curl -fsSL --retry 3 -A "Mozilla/5.0" -o "$f" "$url" || echo "FAILED $url"
+          done < design2/img-list.txt
+          ls -la design2/img
+      - name: Commit images
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add design2/img
+          git diff --cached --quiet || git commit -m "design2: add original-quality images from faig.de"
+          git push
