@@ -244,6 +244,13 @@ p{max-width:62ch}
 .addr{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);padding-bottom:36px;border-bottom:1px solid var(--rule);margin-bottom:36px}
 .addr dt{font:600 .95rem var(--display);color:var(--slate);margin-bottom:6px}
 .addr dd{font-size:.95rem;color:var(--muted)}
+.ci{flex:none;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(168,119,63,.45);color:var(--amber);transition:background .35s,color .35s,border-color .35s}
+.ci svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.contact__big{display:flex;align-items:center;gap:16px}
+.contact__big+.contact__big{margin-top:12px}
+.contact__big:hover .ci{background:var(--amber);border-color:var(--amber);color:#fff}
+.addr .ci{width:40px;height:40px;margin-bottom:14px}
+.addr .ci svg{width:18px;height:18px}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:18px var(--gap)}
 .form h3{grid-column:1/-1}
 .form label{display:flex;flex-direction:column;gap:6px;font-size:.88rem;color:var(--muted)}
