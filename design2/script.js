@@ -194,7 +194,8 @@
     $$(".reveal-img").forEach(function (fig) {
       var img = $("img", fig);
       gsap.fromTo(fig, { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 1.5, ease: "expo.inOut", scrollTrigger: { trigger: fig, start: "top 78%", once: true } });
-      gsap.fromTo(img, { yPercent: -7, scale: 1.18 }, { yPercent: 7, scale: 1.04, ease: "none", scrollTrigger: { trigger: fig, start: "top bottom", end: "bottom top", scrub: true } });
+      var wide = fig.classList.contains("story__img--wide");
+      gsap.fromTo(img, { yPercent: wide ? -2 : -7, scale: wide ? 1.08 : 1.18 }, { yPercent: wide ? 2 : 7, scale: 1.04, ease: "none", scrollTrigger: { trigger: fig, start: "top bottom", end: "bottom top", scrub: true } });
     });
     gsap.fromTo(".light__a", { yPercent: 6 }, { yPercent: -8, ease: "none", scrollTrigger: { trigger: ".light", start: "top bottom", end: "bottom top", scrub: true } });
     gsap.fromTo(".light__b", { yPercent: -4 }, { yPercent: 14, ease: "none", scrollTrigger: { trigger: ".light", start: "top bottom", end: "bottom top", scrub: true } });
