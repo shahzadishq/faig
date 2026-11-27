@@ -185,10 +185,9 @@
     /* headings stay on one line on desktop: shrink until the line fits its column */
     if (window.innerWidth >= 900) {
       $$(".h1[data-split], .h2[data-split]").forEach(function (h) {
+        var avail = h.clientWidth; // column width while the heading still wraps
         h.style.whiteSpace = "nowrap";
         h.style.width = "max-content";
-        var p = h.parentElement, ps = getComputedStyle(p);
-        var avail = p.clientWidth - parseFloat(ps.paddingLeft) - parseFloat(ps.paddingRight);
         var size = parseFloat(getComputedStyle(h).fontSize);
         for (var i = 0; i < 4 && h.getBoundingClientRect().width > avail; i++) {
           size = Math.max(28, Math.floor(size * avail / h.getBoundingClientRect().width) - 1);
