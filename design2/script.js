@@ -182,6 +182,15 @@
       onEnter: function (els) { gsap.to(els, { opacity: 1, y: 0, duration: 1.1, ease: "expo.out", stagger: .12 }); }
     });
 
+    /* headings stay on one line on desktop: shrink until the line fits its column */
+    if (window.innerWidth >= 900) {
+      $$(".h1[data-split], .h2[data-split]").forEach(function (h) {
+        h.style.whiteSpace = "nowrap";
+        var size = parseFloat(getComputedStyle(h).fontSize);
+        while (h.scrollWidth > h.clientWidth + 1 && size > 28) { size -= 1; h.style.fontSize = size + "px"; }
+      });
+    }
+
     /* split headings */
     $$("[data-split]").forEach(function (h) {
       var label = h.textContent; h.setAttribute("aria-label", label);
